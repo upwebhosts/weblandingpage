@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Design Professional Websites with Your Smartphone | Webbteck Masterclass</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="webbteck_logo.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Paystack Inline JS -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .gradient-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+    }
+    .gradient-badge {
+      background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);
+    }
+    .gradient-btn {
+      background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+    }
+    .gradient-btn:hover {
+      background: linear-gradient(90deg, #1d4ed8 0%, #6d28d9 100%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-20 md:pb-0">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-amber-500 via-red-500 to-pink-500 text-white text-xs md:text-sm font-bold py-2.5 px-4 text-center tracking-wide shadow-inner">
+    🔥 SPECIAL OFFER: 80% OFF DISCOUNT ENDS TODAY! <span class="hidden md:inline">| Regular Price: <s>₦15,000</s> → Today: <strong class="underline">₦2,999 Only</strong></span>
+  </div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="webbteck_logo.png" alt="Webbteck Resource Consult Logo" class="h-10 md:h-12 w-auto object-contain" id="site-logo">
+      </div>
+      <a href="#enroll" class="gradient-btn text-white text-xs md:text-sm font-bold px-4 md:px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+        Enroll Now - ₦2,999
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="gradient-hero text-white pt-10 pb-16 md:py-20 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+      
+      <div class="inline-flex items-center space-x-2 bg-slate-800/80 border border-slate-700 px-4 py-1.5 rounded-full mb-6">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-xs md:text-sm font-medium text-slate-200">The #1 Smartphone Web Design Masterclass</span>
+      </div>
+
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+        HOW TO DESIGN <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-pink-400 to-purple-300">PROFESSIONAL WEBSITES</span> WITH YOUR SMARTPHONE
+      </h1>
+
+      <p class="text-base md:text-xl text-slate-300 max-w-3xl mx-auto mb-8 font-normal leading-relaxed">
+        Who told you that without a laptop you can't build complete, functional, and stunning websites? Unlock the secrets to making <span class="text-amber-300 font-semibold">₦50,000 to ₦100,000+ monthly</span> designing websites for business owners—using just your phone!
+      </p>
+
+      <!-- COUNTDOWN TIMER -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 max-w-xl mx-auto mb-8">
+        <p class="text-xs uppercase tracking-wider text-amber-300 font-bold mb-3">Discount Offer Expires In:</p>
+        <div class="grid grid-cols-4 gap-2 md:gap-4 text-center">
+          <div class="bg-slate-900/80 rounded-lg p-2"><span id="timer-hours" class="block text-2xl md:text-3xl font-extrabold text-white">02</span><span class="text-[10px] md:text-xs text-slate-400">Hours</span></div>
+          <div class="bg-slate-900/80 rounded-lg p-2"><span id="timer-minutes" class="block text-2xl md:text-3xl font-extrabold text-white">45</span><span class="text-[10px] md:text-xs text-slate-400">Mins</span></div>
+          <div class="bg-slate-900/80 rounded-lg p-2"><span id="timer-seconds" class="block text-2xl md:text-3xl font-extrabold text-white">12</span><span class="text-[10px] md:text-xs text-slate-400">Secs</span></div>
+          <div class="bg-slate-900/80 rounded-lg p-2"><span id="timer-ms" class="block text-2xl md:text-3xl font-extrabold text-amber-400">88</span><span class="text-[10px] md:text-xs text-slate-400">MS</span></div>
+        </div>
+      </div>
+
+      <!-- CALL TO ACTION BUTTONS -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+        <a href="#enroll" class="w-full sm:w-auto gradient-btn text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+          <span>GET INSTANT ACCESS FOR ₦2,999</span>
+          <i class="fas fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+
+      <!-- TRUST BADGES -->
+      <div class="mt-10 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+        <div class="flex items-center space-x-2"><i class="fas fa-check-circle text-emerald-400"></i><span>100% Smartphone Friendly</span></div>
+        <div class="flex items-center space-x-2"><i class="fas fa-check-circle text-emerald-400"></i><span>No Coding Required</span></div>
+        <div class="flex items-center space-x-2"><i class="fas fa-check-circle text-emerald-400"></i><span>Lifetime Access & Support</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHO IS ISREAL APEH SECTION -->
+  <section class="py-12 bg-white border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-3xl p-6 md:p-10 shadow-xl flex flex-col md:flex-row items-center gap-8">
+        <div class="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-tr from-purple-500 to-amber-400 p-1 flex-shrink-0">
+          <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-4xl text-amber-300 font-bold">
+            IA
+          </div>
+        </div>
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Your Lead Instructor</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1 mb-3">Who is Isreal Apeh?</h2>
+          <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+            We are a Nigerian-based trusted Digital Marketing and Web Development company (<strong>Webbteck Resource Consult</strong>). We specialize in Web Design, Web Development, E-commerce, Content Writing, SEO, and WhatsApp Lead Generation.
+          </p>
+          <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+            Over the years, we have trained hundreds of absolute beginners—including non-laptop owners—to become proficient web designers earning consistently using their smartphones.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDENT TESTIMONIALS SCREENSHOT GALLERY -->
+  <section class="py-16 bg-slate-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold tracking-widest text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Real Proof & Reviews</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">See What My Students Are Saying</h2>
+        <p class="text-slate-600 text-sm md:text-base">Don't take my word for it—read real WhatsApp chats and testimonies from students who took this training!</p>
+      </div>
+
+      <!-- Screenshot Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 cursor-pointer group" onclick="openLightbox('https://res.cloudinary.com/thzur9uo/image/upload/v1790807185/testimony1.png')">
+          <div class="overflow-hidden rounded-xl bg-slate-100 aspect-[3/4] relative">
+            <img src="https://res.cloudinary.com/thzur9uo/image/upload/v1790807185/testimony1.png" alt="Student Feedback 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+              <i class="fas fa-search-plus text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-center text-xs font-semibold text-slate-700 mt-2">Student Proof #1</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 cursor-pointer group" onclick="openLightbox('https://res.cloudinary.com/thzur9uo/image/upload/v1790807184/testimony2.png')">
+          <div class="overflow-hidden rounded-xl bg-slate-100 aspect-[3/4] relative">
+            <img src="https://res.cloudinary.com/thzur9uo/image/upload/v1790807184/testimony2.png" alt="Student Feedback 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+              <i class="fas fa-search-plus text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-center text-xs font-semibold text-slate-700 mt-2">Student Proof #2</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 cursor-pointer group" onclick="openLightbox('https://res.cloudinary.com/thzur9uo/image/upload/v1790807174/testimony_3.png')">
+          <div class="overflow-hidden rounded-xl bg-slate-100 aspect-[3/4] relative">
+            <img src="https://res.cloudinary.com/thzur9uo/image/upload/v1790807174/testimony_3.png" alt="Student Feedback 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+              <i class="fas fa-search-plus text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-center text-xs font-semibold text-slate-700 mt-2">Student Proof #3</p>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 cursor-pointer group" onclick="openLightbox('https://res.cloudinary.com/thzur9uo/image/upload/v1790807187/testimony4.png')">
+          <div class="overflow-hidden rounded-xl bg-slate-100 aspect-[3/4] relative">
+            <img src="https://res.cloudinary.com/thzur9uo/image/upload/v1790807187/testimony4.png" alt="Student Feedback 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+              <i class="fas fa-search-plus text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-center text-xs font-semibold text-slate-700 mt-2">Student Proof #4</p>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 cursor-pointer group" onclick="openLightbox('https://res.cloudinary.com/thzur9uo/image/upload/v1790807192/testimony_5.png')">
+          <div class="overflow-hidden rounded-xl bg-slate-100 aspect-[3/4] relative">
+            <img src="https://res.cloudinary.com/thzur9uo/image/upload/v1790807192/testimony_5.png" alt="Student Feedback 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+              <i class="fas fa-search-plus text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-center text-xs font-semibold text-slate-700 mt-2">Student Proof #5</p>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 cursor-pointer group" onclick="openLightbox('https://res.cloudinary.com/thzur9uo/image/upload/v1790807192/testimony6.png')">
+          <div class="overflow-hidden rounded-xl bg-slate-100 aspect-[3/4] relative">
+            <img src="https://res.cloudinary.com/thzur9uo/image/upload/v1790807192/testimony6.png" alt="Student Feedback 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+              <i class="fas fa-search-plus text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-center text-xs font-semibold text-slate-700 mt-2">Student Proof #6</p>
+        </div>
+
+        <!-- Testimonial 7 -->
+        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 cursor-pointer group" onclick="openLightbox('https://res.cloudinary.com/thzur9uo/image/upload/v1790807187/testimony7.png')">
+          <div class="overflow-hidden rounded-xl bg-slate-100 aspect-[3/4] relative">
+            <img src="https://res.cloudinary.com/thzur9uo/image/upload/v1790807187/testimony7.png" alt="Student Feedback 7" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+              <i class="fas fa-search-plus text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-center text-xs font-semibold text-slate-700 mt-2">Student Proof #7</p>
+        </div>
+
+        <!-- Testimonial 8 -->
+        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 cursor-pointer group" onclick="openLightbox('https://res.cloudinary.com/thzur9uo/image/upload/v1790807193/testimony8.png')">
+          <div class="overflow-hidden rounded-xl bg-slate-100 aspect-[3/4] relative">
+            <img src="https://res.cloudinary.com/thzur9uo/image/upload/v1790807193/testimony8.png" alt="Student Feedback 8" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+              <i class="fas fa-search-plus text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-center text-xs font-semibold text-slate-700 mt-2">Student Proof #8</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE CURRICULUM SECTION -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold tracking-widest text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Step-by-Step Modules</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">What You Are Going To Be Learning</h2>
+        <p class="text-slate-600 text-sm md:text-base">Everything is taught in plain, easy-to-understand practical video lessons you can follow on your phone.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-indigo-300 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4">1</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Introduction to Websites</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>Meaning & core components of a website</span></li>
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>Types of websites & their business functions</span></li>
+          </ul>
+        </div>
+
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-indigo-300 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4">2</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Domain & Web Hosting Mastery</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>How to get Free Hosting & Domain for practicals</span></li>
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>How to purchase paid Domain & Hosting safely</span></li>
+          </ul>
+        </div>
+
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-indigo-300 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4">3</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">cPanel (Control Panel) Setup</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>File Manager navigation & custom Webmail creation</span></li>
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>Email autoresponders & email forwarders setup</span></li>
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>Softaculous App Installer configuration</span></li>
+          </ul>
+        </div>
+
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-indigo-300 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4">4</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">WordPress Installation & Security</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>Installing SSL Certificate (https/security)</span></li>
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>Website clean-up, settings & customization</span></li>
+          </ul>
+        </div>
+
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-indigo-300 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4">5</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Themes & Plugins Installation</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>Installing Free & Premium themes and plugins</span></li>
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>Building landing pages with drag-and-drop mobile builders</span></li>
+          </ul>
+        </div>
+
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-indigo-300 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg mb-4">6</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Full E-Commerce & Blog Websites</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>How to build an Online Shop/E-commerce store on phone</span></li>
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>How to build a full professional Blog site</span></li>
+            <li class="flex items-center space-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i><span>How to backup and restore your site anytime</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UNBEATABLE BONUSES SECTION -->
+  <section class="py-16 bg-gradient-to-br from-amber-500/10 via-purple-500/10 to-indigo-500/10 border-y border-amber-200/50">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold tracking-widest text-amber-700 uppercase bg-amber-100 px-3 py-1 rounded-full border border-amber-200">Exclusive Bonuses</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-2">🎁 Over ₦124,000 Worth Of Free Bonuses!</h2>
+        <p class="text-slate-600 text-sm md:text-base">When you enroll today for ₦2,999, you get access to all these free extra resources:</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <div class="text-amber-500 text-xl font-extrabold mb-1">Bonus #1</div>
+          <h4 class="font-bold text-slate-800 text-base">Web Graphics Masterclass</h4>
+          <p class="text-xs text-slate-500 mt-1">Design graphics for websites easily on phone.</p>
+          <div class="mt-3 text-xs font-bold text-indigo-600">Value: ₦10,000 (FREE)</div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <div class="text-amber-500 text-xl font-extrabold mb-1">Bonus #2</div>
+          <h4 class="font-bold text-slate-800 text-base">Content & Article Writing Guide</h4>
+          <p class="text-xs text-slate-500 mt-1">Write high-converting site copy & articles.</p>
+          <div class="mt-3 text-xs font-bold text-indigo-600">Value: ₦5,000 (FREE)</div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <div class="text-amber-500 text-xl font-extrabold mb-1">Bonus #3</div>
+          <h4 class="font-bold text-slate-800 text-base">Premium Themes & Plugins Pack</h4>
+          <p class="text-xs text-slate-500 mt-1">Get immediate access to premium tools.</p>
+          <div class="mt-3 text-xs font-bold text-indigo-600">Value: ₦89,000 (FREE)</div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <div class="text-amber-500 text-xl font-extrabold mb-1">Bonus #4</div>
+          <h4 class="font-bold text-slate-800 text-base">Client Acquisition Guide</h4>
+          <p class="text-xs text-slate-500 mt-1">How to get high-paying clients for website design.</p>
+          <div class="mt-3 text-xs font-bold text-indigo-600">Value: ₦20,000 (FREE)</div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <div class="text-amber-500 text-xl font-extrabold mb-1">Bonus #5</div>
+          <h4 class="font-bold text-slate-800 text-base">2 Mentorship & Support Groups</h4>
+          <p class="text-xs text-slate-500 mt-1">Direct lifetime access to ask questions & get support.</p>
+          <div class="mt-3 text-xs font-bold text-indigo-600">PRICELESS</div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <div class="text-amber-500 text-xl font-extrabold mb-1">Bonus #6</div>
+          <h4 class="font-bold text-slate-800 text-base">Certificate of Completion</h4>
+          <p class="text-xs text-slate-500 mt-1">Official Webbteck certificate upon finishing training.</p>
+          <div class="mt-3 text-xs font-bold text-indigo-600">INCLUDED</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PAYMENT & ENROLLMENT SECTION -->
+  <section id="enroll" class="py-16 bg-slate-900 text-white relative">
+    <div class="max-w-4xl mx-auto px-4">
+      
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold tracking-widest text-amber-400 uppercase bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/20">Instant Registration</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-3 mb-2">Enroll In The Masterclass Today</h2>
+        <p class="text-slate-400 text-sm md:text-base">Get instant access to all training videos, bonuses & mentorship group for <strong>₦2,999</strong></p>
+      </div>
+
+      <div class="bg-slate-800 border border-slate-700 rounded-3xl p-6 md:p-10 shadow-2xl">
+        
+        <!-- Payment Mode Toggle Buttons -->
+        <div class="flex rounded-xl bg-slate-900 p-1 mb-8 border border-slate-700">
+          <button id="tab-paystack" onclick="switchPaymentMode('paystack')" class="flex-1 py-3 px-4 rounded-lg text-xs md:text-sm font-bold transition-all duration-200 bg-indigo-600 text-white shadow-md">
+            <i class="fas fa-credit-card mr-2"></i>Pay Online (Paystack)
+          </button>
+          <button id="tab-manual" onclick="switchPaymentMode('manual')" class="flex-1 py-3 px-4 rounded-lg text-xs md:text-sm font-bold transition-all duration-200 text-slate-400 hover:text-white">
+            <i class="fas fa-university mr-2"></i>Bank Transfer / Receipt
+          </button>
+        </div>
+
+        <!-- FORM 1: PAYSTACK ONLINE PAYMENT -->
+        <form id="paystack-form" class="space-y-4" onsubmit="handlePaystackPayment(event)">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Full Name *</label>
+            <input type="text" id="paystack-name" required placeholder="Enter your full name" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Email Address *</label>
+            <input type="email" id="paystack-email" required placeholder="Enter your email address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Phone Number (WhatsApp) *</label>
+            <input type="tel" id="paystack-phone" required placeholder="e.g. 08123456789" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+          </div>
+
+          <button type="submit" class="w-full gradient-btn text-white font-extrabold text-base md:text-lg py-4 rounded-xl shadow-xl hover:opacity-95 transition-all duration-300 flex items-center justify-center space-x-2 mt-6">
+            <i class="fas fa-lock text-sm"></i>
+            <span>PAY ₦2,999 SECURELY WITH PAYSTACK</span>
+          </button>
+          <p class="text-center text-xs text-slate-400 mt-2"><i class="fas fa-shield-alt text-emerald-400"></i> Instant automated access right after payment.</p>
+        </form>
+
+        <!-- FORM 2: MANUAL BANK TRANSFER + RECEIPT UPLOAD -->
+        <div id="manual-form" class="space-y-6 hidden">
+          
+          <!-- Bank Details Box -->
+          <div class="bg-slate-900/90 border border-slate-700 rounded-2xl p-5">
+            <p class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3"><i class="fas fa-university mr-1"></i> Official Bank Details:</p>
+            <div class="space-y-2 text-sm text-slate-200">
+              <div class="flex justify-between border-b border-slate-800 pb-2">
+                <span class="text-slate-400">Bank Name:</span>
+                <span class="font-bold text-white">OPay / Moniepoint</span>
+              </div>
+              <div class="flex justify-between border-b border-slate-800 pb-2">
+                <span class="text-slate-400">Account Name:</span>
+                <span class="font-bold text-white">Isreal Apeh / Webbteck</span>
+              </div>
+              <div class="flex justify-between items-center pt-1">
+                <span class="text-slate-400">Account Number:</span>
+                <div class="flex items-center space-x-2">
+                  <span class="font-mono font-extrabold text-lg text-amber-300" id="acc-num">8123456789</span>
+                  <button type="button" onclick="copyAccountNum()" class="bg-indigo-600/50 hover:bg-indigo-600 text-white text-xs px-2.5 py-1 rounded transition-all">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upload Receipt Form -->
+          <form onsubmit="handleManualPayment(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Full Name *</label>
+              <input type="text" id="manual-name" required placeholder="Enter your full name" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Phone Number (WhatsApp) *</label>
+              <input type="tel" id="manual-phone" required placeholder="e.g. 08123456789" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Upload Payment Receipt Proof *</label>
+              <input type="file" id="manual-receipt" accept="image/*,.pdf" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-300 text-xs file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-indigo-600 file:text-white hover:file:bg-indigo-700">
+            </div>
+
+            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base md:text-lg py-4 rounded-xl shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 mt-6">
+              <i class="fab fa-whatsapp text-lg"></i>
+              <span>SEND RECEIPT & CLAIM ACCESS ON WHATSAPP</span>
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FREQUENTLY ASKED QUESTIONS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="border border-slate-200 rounded-2xl p-5">
+          <h4 class="font-bold text-slate-900 text-base mb-1">Do I need a computer or laptop for this course?</h4>
+          <p class="text-sm text-slate-600">No! This course is specially created for smartphone users (Android or iPhone). Every single module is practically recorded on phone.</p>
+        </div>
+
+        <div class="border border-slate-200 rounded-2xl p-5">
+          <h4 class="font-bold text-slate-900 text-base mb-1">How do I access the training after payment?</h4>
+          <p class="text-sm text-slate-600">If you pay via Paystack, you will be redirected automatically to the training access portal & mentorship group. If you pay via Bank transfer, click the send receipt button to confirm on WhatsApp instantly.</p>
+        </div>
+
+        <div class="border border-slate-200 rounded-2xl p-5">
+          <h4 class="font-bold text-slate-900 text-base mb-1">What if I get stuck during practicals?</h4>
+          <p class="text-sm text-slate-600">You will be added to our active VIP Mentorship & Support Group where Mr. Isreal Apeh and technical team members answer your questions directly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <img src="webbteck_logo.png" alt="Webbteck Logo" class="h-10 mx-auto mb-4 object-contain brightness-200">
+      <p class="text-xs text-slate-500 mb-4">Webbteck Resource Consult — Empowering Individuals with Digital Skills.</p>
+      <p class="text-xs text-slate-600">© 2026 Isreal Apeh (Webbteck). All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BOTTOM BUY BAR -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-3 md:hidden flex items-center justify-between">
+    <div>
+      <span class="block text-[10px] uppercase text-slate-400">Discounted Price:</span>
+      <span class="text-lg font-extrabold text-amber-400">₦2,999</span>
+      <span class="text-xs text-slate-500 line-through">₦15,000</span>
+    </div>
+    <a href="#enroll" class="gradient-btn text-white text-xs font-extrabold px-5 py-2.5 rounded-xl shadow-lg">
+      ENROLL NOW <i class="fas fa-arrow-right ml-1"></i>
+    </a>
+  </div>
+
+  <!-- LIGHTBOX MODAL FOR TESTIMONIAL SCREENSHOTS -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-md items-center justify-center p-4" onclick="closeLightbox()">
+    <button class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-amber-400">&times;</button>
+    <img id="lightbox-img" src="" alt="Zoomed Testimonial" class="max-h-[90vh] max-w-[95vw] rounded-lg shadow-2xl object-contain">
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Lightbox Image Modal
+    function openLightbox(url) {
+      document.getElementById('lightbox-img').src = url;
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.getElementById('lightbox').classList.add('flex');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+      document.getElementById('lightbox').classList.remove('flex');
+    }
+
+    // 2. Toggle Payment Tabs
+    function switchPaymentMode(mode) {
+      const paystackForm = document.getElementById('paystack-form');
+      const manualForm = document.getElementById('manual-form');
+      const tabPaystack = document.getElementById('tab-paystack');
+      const tabManual = document.getElementById('tab-manual');
+
+      if (mode === 'paystack') {
+        paystackForm.classList.remove('hidden');
+        manualForm.classList.add('hidden');
+        tabPaystack.className = "flex-1 py-3 px-4 rounded-lg text-xs md:text-sm font-bold transition-all duration-200 bg-indigo-600 text-white shadow-md";
+        tabManual.className = "flex-1 py-3 px-4 rounded-lg text-xs md:text-sm font-bold transition-all duration-200 text-slate-400 hover:text-white";
+      } else {
+        paystackForm.classList.add('hidden');
+        manualForm.classList.remove('hidden');
+        tabManual.className = "flex-1 py-3 px-4 rounded-lg text-xs md:text-sm font-bold transition-all duration-200 bg-indigo-600 text-white shadow-md";
+        tabPaystack.className = "flex-1 py-3 px-4 rounded-lg text-xs md:text-sm font-bold transition-all duration-200 text-slate-400 hover:text-white";
+      }
+    }
+
+    // 3. Copy Account Number
+    function copyAccountNum() {
+      const accNum = document.getElementById('acc-num').innerText;
+      navigator.clipboard.writeText(accNum);
+      alert('Account number copied to clipboard: ' + accNum);
+    }
+
+    // 4. Paystack Inline Handler
+    function handlePaystackPayment(e) {
+      e.preventDefault();
+      const name = document.getElementById('paystack-name').value;
+      const email = document.getElementById('paystack-email').value;
+      const phone = document.getElementById('paystack-phone').value;
+
+      let handler = PaystackPop.setup({
+        key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxx', // REPLACE WITH YOUR PAYSTACK PUBLIC KEY
+        email: email,
+        amount: 2999 * 100, // ₦2,999 in kobo
+        currency: 'NGN',
+        ref: 'WBT_' + Math.floor((Math.random() * 1000000000) + 1),
+        metadata: {
+          custom_fields: [
+            { display_name: "Full Name", variable_name: "full_name", value: name },
+            { display_name: "Phone Number", variable_name: "phone_number", value: phone }
+          ]
+        },
+        callback: function(response) {
+          alert('Payment Successful! Reference: ' + response.reference);
+          window.location.href = "https://chat.whatsapp.com/YOUR_MENTORSHIP_GROUP_LINK"; // REPLACE WITH YOUR ACCESS LINK
+        },
+        onClose: function() {
+          alert('Transaction cancelled.');
+        }
+      });
+      handler.openIframe();
+    }
+
+    // 5. Manual Bank Transfer WhatsApp Dispatcher
+    function handleManualPayment(e) {
+      e.preventDefault();
+      const name = document.getElementById('manual-name').value;
+      const phone = document.getElementById('manual-phone').value;
+      const receiptInput = document.getElementById('manual-receipt');
+
+      const whatsappNum = "2348054550907"; // YOUR WHATSAPP PHONE NUMBER HERE
+
+      let message = `Hello Mr. Isreal Apeh,\n\nI have made a bank transfer payment of ₦2,999 for the *Smartphone Web Design Masterclass*.\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n\nI have uploaded my receipt proof. Please grant me instant access to the course and support group!`;
+      
+      const encodedMsg = encodeURIComponent(message);
+      window.open(`https://wa.me/${whatsappNum}?text=${encodedMsg}`, '_blank');
+    }
+
+    // 6. Countdown Timer Logic
+    let totalSeconds = (2 * 3600) + (45 * 60) + 12;
+    setInterval(() => {
+      if (totalSeconds <= 0) return;
+      totalSeconds--;
+      const h = Math.floor(totalSeconds / 3600);
+      const m = Math.floor((totalSeconds % 3600) / 60);
+      const s = totalSeconds % 60;
+      document.getElementById('timer-hours').innerText = String(h).padStart(2, '0');
+      document.getElementById('timer-minutes').innerText = String(m).padStart(2, '0');
+      document.getElementById('timer-seconds').innerText = String(s).padStart(2, '0');
+      document.getElementById('timer-ms').innerText = String(Math.floor(Math.random() * 90) + 10);
+    }, 1000);
+  </script>
+</body>
+</html>
