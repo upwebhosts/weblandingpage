@@ -91,7 +91,6 @@
           
           <!-- Browser-Style Header Bar -->
           <div class="bg-slate-950 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
-            <!-- Window Controls -->
             <div class="flex items-center space-x-2">
               <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
               <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
@@ -99,7 +98,6 @@
               <span class="text-[11px] font-mono text-slate-400 ml-2 hidden sm:inline-block">learn.webbteck.com/masterclass-preview</span>
             </div>
 
-            <!-- Live Badge -->
             <div class="flex items-center space-x-1.5 bg-rose-500/10 border border-rose-500/30 px-2.5 py-0.5 rounded-full">
               <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
               <span class="text-[10px] font-bold uppercase tracking-wider text-rose-400">Masterclass Preview</span>
@@ -200,7 +198,7 @@
     </div>
   </section>
 
-  <!-- ENROLLMENT FORM SECTION WITH BOTH DUAL TAB PAYMENTS & 2 BANK ACCOUNTS -->
+  <!-- ENROLLMENT FORM SECTION -->
   <section id="enroll" class="py-16 bg-slate-900 border-t border-slate-800">
     <div class="max-w-xl mx-auto px-4">
       <div class="bg-slate-950 p-6 sm:p-8 rounded-3xl shadow-2xl border border-slate-800">
@@ -223,7 +221,7 @@
           </button>
         </div>
 
-        <!-- PAYMENT METHOD A: BANK TRANSFER DETAILS (UPDATED WITH 2 ACCOUNTS) -->
+        <!-- PAYMENT METHOD A: BANK TRANSFER DETAILS WITH RECEIPT UPLOAD -->
         <div id="manual-form" class="space-y-6">
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 relative overflow-hidden">
             
@@ -290,7 +288,7 @@
 
           </div>
 
-          <!-- MANUAL FORM FIELDS -->
+          <!-- MANUAL FORM FIELDS WITH RECEIPT PROOF FILE UPLOAD -->
           <form onsubmit="sendWhatsAppReceipt(event)" class="space-y-4">
             <div>
               <label for="manual-full-name" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Full Name *</label>
@@ -300,6 +298,12 @@
             <div>
               <label for="manual-phone-number" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Phone Number (WhatsApp) *</label>
               <input type="tel" id="manual-phone-number" required placeholder="e.g. 08123456789" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 focus:ring-2 focus:ring-indigo-500 text-sm outline-none text-white transition">
+            </div>
+
+            <!-- UPLOAD PAYMENT RECEIPT PROOF FIELD -->
+            <div>
+              <label for="manual-receipt-upload" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Upload Payment Receipt Proof *</label>
+              <input type="file" id="manual-receipt-upload" accept="image/*,.pdf" class="w-full text-xs text-slate-400 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-indigo-600 file:text-white hover:file:bg-indigo-500 bg-slate-900 rounded-xl border border-slate-800 p-2 cursor-pointer">
             </div>
 
             <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base py-4 rounded-xl shadow-xl transition-all flex items-center justify-center space-x-2">
