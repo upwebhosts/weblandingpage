@@ -107,15 +107,16 @@
           </div>
 
           <!-- Responsive Video Aspect Ratio Wrapper -->
-          <div class="aspect-video w-full bg-black relative">
-            <iframe 
-              class="w-full h-full" 
-              src="https://https://res.cloudinary.com/thzur9uo/video/upload/v1792797765/my_video_ads.mp4" 
-              title="Smartphone Web Design Masterclass Intro Video" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-            </iframe>
+          <!-- Responsive Video Aspect Ratio Wrapper -->
+          <div class="aspect-video w-full bg-black relative rounded-b-xl overflow-hidden flex items-center justify-center">
+            <video 
+              class="w-full h-full object-cover" 
+              controls 
+              playsinline 
+              preload="metadata">
+              <source src="https://res.cloudinary.com/thzur9uo/video/upload/v1792797765/my_video_ads.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <!-- Bottom Caption Bar -->
