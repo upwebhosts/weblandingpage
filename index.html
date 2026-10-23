@@ -333,4 +333,228 @@
             <i class="fas fa-credit-card"></i>
             <span>Pay Online (Paystack)</span>
           </button>
-          <button id="tab-manual" type="button" onclick="switch
+          <button id="tab-manual" type="button" onclick="switchTab('manual')" class="py-3 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-indigo-600 text-white shadow-lg flex items-center justify-center space-x-2">
+            <i class="fas fa-university"></i>
+            <span>Bank Transfer / Receipt</span>
+          </button>
+        </div>
+
+        <!-- PAYMENT METHOD A: BANK TRANSFER DETAILS WITH RECEIPT UPLOAD (DEFAULT ACTIVE) -->
+        <div id="manual-form" class="space-y-6">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 relative overflow-hidden">
+            
+            <p class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4 flex items-center space-x-2">
+              <i class="fas fa-university text-sm"></i>
+              <span>Official Bank Details (Choose One):</span>
+            </p>
+
+            <!-- ACCOUNT 1 (PRIMARY - OPAY) -->
+            <div class="mb-5 pb-5 border-b border-slate-800">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Primary Account (Option A)</h4>
+                <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">Recommended</span>
+              </div>
+              <div class="space-y-2 text-sm text-slate-200">
+                <div class="flex justify-between border-b border-slate-800/60 pb-1.5">
+                  <span class="text-slate-400">Bank Name:</span>
+                  <span class="font-bold text-white">OPay</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-800/60 pb-1.5">
+                  <span class="text-slate-400">Account Name:</span>
+                  <span class="font-bold text-white">Isreal Apeh</span>
+                </div>
+                <div class="flex justify-between items-center pt-1">
+                  <span class="text-slate-400">Account Number:</span>
+                  <div class="flex items-center space-x-2">
+                    <span class="font-mono font-extrabold text-lg text-amber-300" id="acc-num-1">8054550907</span>
+                    <button type="button" onclick="copyAccountNum('1')" class="bg-indigo-600 hover:bg-indigo-500 text-white text-[11px] font-bold px-3 py-1 rounded-lg transition flex items-center space-x-1">
+                      <i class="fas fa-copy text-xs"></i>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACCOUNT 2 (BACKUP - UBA) -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Backup Account (Option B)</h4>
+                <span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-full">Option B</span>
+              </div>
+              <div class="space-y-2 text-sm text-slate-200">
+                <div class="flex justify-between border-b border-slate-800/60 pb-1.5">
+                  <span class="text-slate-400">Bank Name:</span>
+                  <span class="font-bold text-white">UBA</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-800/60 pb-1.5">
+                  <span class="text-slate-400">Account Name:</span>
+                  <span class="font-bold text-white">Isreal Apeh</span>
+                </div>
+                <div class="flex justify-between items-center pt-1">
+                  <span class="text-slate-400">Account Number:</span>
+                  <div class="flex items-center space-x-2">
+                    <span class="font-mono font-extrabold text-lg text-amber-300" id="acc-num-2">2145264738</span>
+                    <button type="button" onclick="copyAccountNum('2')" class="bg-indigo-600 hover:bg-indigo-500 text-white text-[11px] font-bold px-3 py-1 rounded-lg transition flex items-center space-x-1">
+                      <i class="fas fa-copy text-xs"></i>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- MANUAL FORM FIELDS WITH RECEIPT PROOF FILE UPLOAD -->
+          <form onsubmit="sendWhatsAppReceipt(event)" class="space-y-4">
+            <div>
+              <label for="manual-full-name" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Full Name *</label>
+              <input type="text" id="manual-full-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 focus:ring-2 focus:ring-indigo-500 text-sm outline-none text-white transition">
+            </div>
+
+            <div>
+              <label for="manual-phone-number" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Phone Number (WhatsApp) *</label>
+              <input type="tel" id="manual-phone-number" required placeholder="e.g. 08123456789" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 focus:ring-2 focus:ring-indigo-500 text-sm outline-none text-white transition">
+            </div>
+
+            <!-- UPLOAD PAYMENT RECEIPT PROOF FIELD -->
+            <div>
+              <label for="manual-receipt-upload" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Upload Payment Receipt Proof *</label>
+              <input type="file" id="manual-receipt-upload" accept="image/*,.pdf" class="w-full text-xs text-slate-400 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-indigo-600 file:text-white hover:file:bg-indigo-500 bg-slate-900 rounded-xl border border-slate-800 p-2 cursor-pointer">
+            </div>
+
+            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base py-4 rounded-xl shadow-xl transition-all flex items-center justify-center space-x-2">
+              <i class="fab fa-whatsapp text-lg"></i>
+              <span>SEND RECEIPT & CLAIM ACCESS ON WHATSAPP</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- PAYMENT METHOD B: PAYSTACK ONLINE FORM -->
+        <div id="paystack-form" class="space-y-4 hidden">
+          <form onsubmit="payWithPaystack(event)" class="space-y-4">
+            <div>
+              <label for="paystack-full-name" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Full Name *</label>
+              <input type="text" id="paystack-full-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 focus:ring-2 focus:ring-indigo-500 text-sm outline-none text-white transition">
+            </div>
+
+            <div>
+              <label for="paystack-email-address" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Email Address *</label>
+              <input type="email" id="paystack-email-address" required placeholder="e.g. john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 focus:ring-2 focus:ring-indigo-500 text-sm outline-none text-white transition">
+            </div>
+
+            <div>
+              <label for="paystack-phone-number" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Phone / WhatsApp Number *</label>
+              <input type="tel" id="paystack-phone-number" required placeholder="e.g. 08012345678" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 focus:ring-2 focus:ring-indigo-500 text-sm outline-none text-white transition">
+            </div>
+
+            <button type="submit" class="w-full gradient-btn text-white font-extrabold text-base py-4 rounded-xl shadow-xl hover:scale-[1.02] transition-transform flex items-center justify-center space-x-2">
+              <i class="fas fa-lock text-sm"></i>
+              <span>PAY ₦2,999 & ENROLL NOW</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-500 text-xs py-8 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 text-center space-y-3">
+      <p>&copy; 2026 Webbteck Resource Consult. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Tab Switching Function
+    function switchTab(type) {
+      const paystackForm = document.getElementById('paystack-form');
+      const manualForm = document.getElementById('manual-form');
+      const tabPaystack = document.getElementById('tab-paystack');
+      const tabManual = document.getElementById('tab-manual');
+
+      if (type === 'paystack') {
+        paystackForm.classList.remove('hidden');
+        manualForm.classList.add('hidden');
+        tabPaystack.className = "py-3 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-indigo-600 text-white shadow-lg flex items-center justify-center space-x-2";
+        tabManual.className = "py-3 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-400 flex items-center justify-center space-x-2";
+      } else {
+        manualForm.classList.remove('hidden');
+        paystackForm.classList.add('hidden');
+        tabManual.className = "py-3 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-indigo-600 text-white shadow-lg flex items-center justify-center space-x-2";
+        tabPaystack.className = "py-3 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-400 flex items-center justify-center space-x-2";
+      }
+    }
+
+    // Lightbox Modal Functions
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+    }
+
+    // Copy Account Number Function (Supports OPay & UBA)
+    function copyAccountNum(type) {
+      const accountId = 'acc-num-' + type;
+      const accNum = document.getElementById(accountId).innerText;
+      
+      navigator.clipboard.writeText(accNum)
+        .then(() => {
+          const bankName = (type === '1') ? 'OPay' : 'UBA';
+          alert(`${bankName} Account Number (${accNum}) copied to clipboard!`);
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+          alert('Account Number: ' + accNum);
+        });
+    }
+
+    // WhatsApp Receipt Verification Redirect
+    function sendWhatsAppReceipt(e) {
+      e.preventDefault();
+      const name = document.getElementById('manual-full-name').value;
+      const phone = document.getElementById('manual-phone-number').value;
+      
+      const message = `Hello Isreal, my name is ${name} (${phone}). I have made a bank transfer of ₦2,999 for the Smartphone Web Design Masterclass. Here is my payment receipt proof.`;
+      const encodedMsg = encodeURIComponent(message);
+      
+      window.open(`https://wa.me/2348054550907?text=${encodedMsg}`, '_blank');
+    }
+
+    // Paystack Online Integration
+    function payWithPaystack(e) {
+      e.preventDefault();
+      const name = document.getElementById('paystack-full-name').value;
+      const email = document.getElementById('paystack-email-address').value;
+      const phone = document.getElementById('paystack-phone-number').value;
+
+      let handler = PaystackPop.setup({
+        key: 'pk_live_xxxxxxxxx', // Replace with your Paystack Public Key
+        email: email,
+        amount: 2999 * 100, // Amount in kobo
+        currency: 'NGN',
+        ref: '' + Math.floor((Math.random() * 1000000000) + 1),
+        metadata: {
+          custom_fields: [
+            { display_name: "Full Name", variable_name: "full_name", value: name },
+            { display_name: "Phone Number", variable_name: "phone_number", value: phone }
+          ]
+        },
+        callback: function(response) {
+          alert('Payment successful! Transaction reference: ' + response.reference);
+        },
+        onClose: function() {
+          alert('Window closed.');
+        }
+      });
+      handler.openIframe();
+    }
+  </script>
+</body>
+</html>
